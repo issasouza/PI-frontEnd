@@ -1,0 +1,37 @@
+
+
+
+#img-bg{
+    background-image: url('../../assets/Marketplacepana.png');
+    min-height: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+}
+
+.myButton {
+	background-color:#849937;
+	border-radius:28px;
+	border:1px solid #667a14;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:8px 21px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:#596625;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+             
