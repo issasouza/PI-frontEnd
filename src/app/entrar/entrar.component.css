@@ -2,7 +2,7 @@
 
 
 #img-bg{
-    background-image: url('../../assets/Marketplacepana.png');
+    background-image: url('https://i.imgur.com/jkCTCpj.png');
     min-height: 650px;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,9 +15,9 @@ h1{
 }
 
 .myButton {
-	background-color:#849937;
+	background-color:#208694;
 	border-radius:28px;
-	border:1px solid #667a14;
+	border:1px solid #14555e;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -27,7 +27,7 @@ h1{
 	text-decoration:none;
 }
 .myButton:hover {
-	background-color:#596625;
+	background-color:#67B7C2;
 }
 .myButton:active {
 	position:relative;

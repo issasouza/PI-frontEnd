@@ -1,5 +1,5 @@
 .bg-color{
-    background-color: #839937;
+    background-color: #023047;
 }
 .social-network{
     list-style: none;
@@ -17,10 +17,10 @@
     padding: 10px;
  }
 .fa-envelope-o:hover{
-    color: #EE5E15;
+    color: #67B7C2;
 }
 .fa-instagram:hover{
-    color: #EE5E15;
+    color: #67B7C2;
 }
 
 
@@ -30,5 +30,8 @@
     border-radius: 50% / 30px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-  }
+}
+#img-footer{
+
+}
 
