@@ -1,6 +1,7 @@
 # Projeto integrador UPV (Front-End)  <img align="center" alt="Naty-Java" height="100" width="200" src="https://i.imgur.com/X1Wvbro.png" >
   
 
+
 ## Equipe
 - <a href="https://github.com/issasouza">Isabelly Souza </a>
 -  <a href="https://github.com/Nataly-Carvalho">Nataly Carvalho</a>
