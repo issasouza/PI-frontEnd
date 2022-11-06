@@ -4,35 +4,36 @@
                 <div class="raw d-flex justify-content-center">
                     <div class="col-md-10">
                         <h1 class=" text-center">CADASTRO</h1>
-                        <div class="form-group">
-                            <label for="usuario">Usuário</label>
-                            <input class="form-control" type="text" name="usuario" placeholder="Seu usuario">
+                        <div class="form-group mb-3">
+                            <label for="usuario">Nome completo</label>
+                            <input [(ngModel)]="user.nome" class="form-control" type="text" name="Nome" placeholder="Digite seu nome completo">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="email">Email</label>
-                            <input class="form-control" type="email" name="email" placeholder="Digite seu email">
+                            <input [(ngModel)]="user.usuario" class="form-control" type="usuario" name="usuario" placeholder="Digite seu email">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="senha">Senha</label>
-                            <input class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                            <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                            <p>Sua senha deve ter no minimo 8 caracteres!</p>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="senha">Confirma senha</label>
-                            <input class="form-control" type="password" name="confirmsenha" id="confirmsenha" placeholder="Digite sua senha">
+                            <input  [(ngModel)]="user.senha" class="form-control" type="password" name="confirmsenha" id="confirmsenha" placeholder="Digite sua senha">
                         </div>
 
-                        <div class="form-group">
-                            <label for="usuario">Foto</label>
-                            <input class="form-control" type="text" name="foto" placeholder="Sua foto">
+                        <div class="form-group mb-3">
+                            <label for="usuario">Link da foto</label>
+                            <input  [(ngModel)]="user.foto" class="form-control" type="text" name="foto" placeholder="Adicione o link da sua foto">
                         </div>
 
                             <div class="d-flex justify-content-center mt-5 ">
 
-                            <button type="submit" class="btn btn-danger button-4">Cancelar</button>
+                            <button type="submit" class="btn btn-danger button-4" routerLink="/entrar">Cancelar</button>
 
-                            <button type="submit" class="btn btn-success">Cadastrar</button>
+                            <button type="submit" class="btn btn-success" (click)="cadastrar()">Cadastrar</button>
                         </div>
 
                         
