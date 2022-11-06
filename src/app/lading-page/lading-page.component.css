@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+.bg{
+background-color:  #047393;
+}
+#img-bg{
+    background-image: url('https://i.imgur.com/QotqroC.png');
+    min-height: 695px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #047393;
+}
+#bg{
+    background-color: #047393;
+}
+#tm-f{
+    font-size: 20px;
+}
+h1 h2 p{
+    font-family: 'Roboto Slab', serif;
+}
+h1{
+    font-size: 57px;
+}
+h2{
+    font-size: 40px;
+}
+p{
+    font-size: 16px;
+}
