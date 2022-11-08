@@ -11,6 +11,7 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LadingPageComponent } from './lading-page/lading-page.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { InicioComponent } from './inicio/inicio.component';
     EntrarComponent,
     CadastrarComponent,
     LadingPageComponent,
-    InicioComponent
+    InicioComponent,
+    SobreNosComponent
   ],
   imports: [
     BrowserModule,
