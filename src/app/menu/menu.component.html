@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <img class="navbar-brand" src="https://i.imgur.com/X1Wvbro.png" alt="imagem para trocar" width="150px" height="150px"  class="img-fluid rounded circle">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,27 +7,30 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active fs-16" aria-current="page" href="#">INICIO</a>
+          <a class="nav-link active fs-16 m-lg-3" routerLink="/inicio">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-16" href="#">PERFIL</a>
+          <a class="nav-link active fs-16 m-lg-3" href="#">Perfil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-16" href="#">FICHAS TECNICAS</a>
+          <a class="nav-link active fs-16 m-lg-3" href="#">Fichas tecnicas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-16" href="#">LOJAS</a>
+          <a class="nav-link active fs-16 m-lg-3"  >Produtos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-16" href="#">SEU CARRINHO</a>
+          <a class="nav-link active fs-16 m-lg-3" href="#">Lojas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fs-16" href="#">SOBRE NÓS</a>
+          <a class="nav-link active fs-16 m-lg-3" routerLink="/sobre-nos">Sobre nós</a>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link active fs-16 m-lg-3 btn btn-info" href="#">Seu carrinho <i class="bi bi-cart3"></i></button>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto d-flex align-items-end">
         <li class="nav-item m-lg-4">
-          <a (click)="sair()" class="mr-5 text-dark fs-16">SAIR <i class="fa fa-sign-out" aria-hidden="true"></i>
+          <a (click)='sair()' class="m-0 text-dark fs-16">Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
           </a>
         </li>
       </ul>

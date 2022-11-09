@@ -11,6 +11,9 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LadingPageComponent } from './lading-page/lading-page.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { ProdutosComponent } from './produtos/produtos.component';
+import { CategoriasComponent } from './categorias/categorias.component';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { InicioComponent } from './inicio/inicio.component';
     EntrarComponent,
     CadastrarComponent,
     LadingPageComponent,
-    InicioComponent
+    InicioComponent,
+    SobreNosComponent,
+    ProdutosComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,

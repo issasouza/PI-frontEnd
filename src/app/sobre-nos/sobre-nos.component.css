@@ -1,0 +1,21 @@
+#bg{
+    background-image: url('https://i.imgur.com/IrKwpF5.gif');
+    min-height: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+}
+#bg2{
+    background-image: url('https://i.imgur.com/uBaXOdf.gif');
+    min-height: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#fs-30{
+    font-size: 24px;
+}
+.tm-social {
+    width: 40px;
+    height: 40px;
+}
