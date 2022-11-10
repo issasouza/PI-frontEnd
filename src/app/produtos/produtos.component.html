@@ -1,1 +1,133 @@
-<p>produtos works!</p>
+<div class="conteainer-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://i.imgur.com/sWlkIvn.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/sWlkIvn.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/sWlkIvn.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row d-flex align-items-center">
+        <div class="col-md-6">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                class="btn btn-outline-success m-lg-3">Registrar novo produto</button>
+            <button type="button" class="btn btn-outline-warning" routerLink="/categorias">Registar nova categoria</button>
+        </div>
+        <div class="col-md-6">
+            <div class="row d-flex justify-content-end">
+                <div class="col-md-6">
+                    <nav class="navbar bg-light">
+                        <div class="container-fluid">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Produto por categoria"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Pesquisa</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- nav -->
+<div class="container mb-5 mt-5" id="produtos">
+    <nav>
+        <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                type="button" role="tab" aria-controls="nav-home" aria-selected="true">Todos os produtos</button>
+
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Meus produtos</button>
+        </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+            tabindex="0">...</div>
+
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">bb
+        </div>
+
+    </div>
+
+</div>
+<!-- nav -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Novo Produto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group mt-lg-3">
+                    <label class="mb-2" for="titulo">Nome do produto</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite o nome do produto">
+                </div>
+
+                <div class="form-group mt-lg-3">
+                    <label class="mb-2" for="titulo">Preço</label>
+                    <input type="text" class="form-control" id="preco" placeholder="Digite o preço do produto">
+                </div>
+
+                <div class="form-group mt-lg-3">
+                    <label class="mb-2" for="titulo">Foto</label>
+                    <input type="text" class="form-control" id="foto" placeholder="coloque o link da foto">
+                </div>
+
+                <div class="form-group mt-lg-3">
+                    <label class="mb-2" for="titulo">Descrição do produto</label>
+                    <textarea name="descricao" class="form-control" id="descriao" rows="2"></textarea>
+                </div>
+
+                <div class="form-group mt-lg-3 ">
+                    <label class="mb-2" for="Categoria">Escolha uma categoria</label>
+                    <select name="categoria" id="categoria" class="form-control">
+                        <option value="">Categoria</option>
+                    </select>
+                    
+                </div>
+
+
+            </div>
+            <div class="modal-footer mt-lg-3">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-info">Registar novo produto</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -14,6 +15,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { CategoriasComponent } from './categorias/categorias.component';
     InicioComponent,
     SobreNosComponent,
     ProdutosComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    CategoriaEditComponent,
+    CategoriaDeleteComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,10 @@ import { CategoriasComponent } from './categorias/categorias.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide:LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
