@@ -9,3 +9,43 @@
 .button-4{
     margin-right: 4ch;
 }
+.myButtonCancel {
+	background-color:#b90505;
+	border-radius:28px;
+	border:1px solid #9c0b0b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:8px 21px;
+	text-decoration:none;
+}
+.myButtonCancel:hover {
+	background-color:#FF0000;
+}
+.myButtonCancel:active {
+	position:relative;
+	top:1px;
+}
+
+
+.myButton {
+	background-color:#208694;
+	border-radius:28px;
+	border:1px solid #14555e;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:8px 21px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:#67B7C2;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
