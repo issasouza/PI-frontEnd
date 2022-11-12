@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Categoria } from 'src/app/model/Categoria';
-import { Produtos } from 'src/app/model/Produtos';
-import { AlertasService } from 'src/app/service/alertas.service';
-import { CategoriaService } from 'src/app/service/categoria.service';
-import { ProdutosService } from 'src/app/service/produtos.service';
 import { environment } from 'src/environments/environment.prod';
+import { Categoria } from '../model/Categoria';
+import { Produtos } from '../model/Produtos';
+import { AlertasService } from '../service/alertas.service';
+import { CategoriaService } from '../service/categoria.service';
+import { ProdutosService } from '../service/produtos.service';
 
 @Component({
-  selector: 'app-produtos-edit',
-  templateUrl: './produtos-edit.component.html',
-  styleUrls: ['./produtos-edit.component.css']
+  selector: 'app-produto-view',
+  templateUrl: './produto-view.component.html',
+  styleUrls: ['./produto-view.component.css']
 })
-export class ProdutosEditComponent implements OnInit {
+export class ProdutoViewComponent implements OnInit {
 
   produtos: Produtos = new Produtos()
   categoria: Categoria = new Categoria()
@@ -52,18 +52,4 @@ export class ProdutosEditComponent implements OnInit {
       this.listaCategorias =resp
     })
   }
-
-  atualizar(){
-    this.categoria.id = this.idCategoria
-    this.produtos.categoria= this.categoria
-
-    this.produtosService.putProdutos(this.produtos).subscribe((resp: Produtos)=>{
-      this.produtos = resp
-      this.alertas.showAlertSuccess('Produto atualizado com sucesso!')
-      this.router.navigate(['/produtos'])
-    })
-
-  }
-
-
 }

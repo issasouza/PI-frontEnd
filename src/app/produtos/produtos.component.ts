@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produtos } from '../model/Produtos';
 import { User } from '../model/User';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutosService } from '../service/produtos.service';
@@ -22,14 +23,21 @@ export class ProdutosComponent implements OnInit {
   idCategoria:number
   listaCategorias: Categoria[]
 
+  nomeProduto: string
+  nomeCategoria: string
+
   user: User = new User
   idUser = environment.id
 
+  key ='data'
+  reverse =true
+  
   constructor(
     private router: Router,
     private produtosService: ProdutosService,
     private categoriaService: CategoriaService,
-    private authService: AuthService
+    private authService: AuthService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -74,11 +82,30 @@ export class ProdutosComponent implements OnInit {
     this.produtosService.postProdutos(this.produtos).subscribe((resp: Produtos)=>{
       this.produtos = resp
 
-      alert('Produto cadastrado com sucesso')
+      this.alertas.showAlertSuccess('Produto cadastrado com sucesso')
 
       this.produtos = new Produtos()
       this.getAllProdutos()
     })
+  }
+  findByNomeProduto(){
+
+    if(this.nomeProduto == ''){
+      this.getAllProdutos()
+    }else{
+      this.produtosService.getByNomeProdutos(this.nomeProduto).subscribe((resp: Produtos[])=>{
+        this.listaProdutos = resp
+      })
+    }
+  }
+  findByNomeCategoria(){
+    if(this.nomeCategoria == ''){
+      this.getAllCategorias()
+    }else{
+      this.categoriaService.getByNomeCategoria(this.nomeCategoria).subscribe((resp: Categoria[])=>{
+        this.listaCategorias = resp
+      })
+    }
   }
 
 

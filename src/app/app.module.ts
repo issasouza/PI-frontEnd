@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -19,6 +20,14 @@ import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.com
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
 import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { OrderModule } from 'ngx-order-pipe';
+import { LojasComponent } from './lojas/lojas.component';
+import { FichaTecnicaComponent } from './ficha-tecnica/ficha-tecnica.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ProdutoViewComponent } from './produto-view/produto-view.component';
+
 
 
 @NgModule({
@@ -37,13 +46,21 @@ import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delet
     CategoriaDeleteComponent,
     ProdutosEditComponent,
     ProdutosDeleteComponent,
+    UserEditComponent,
+    AlertasComponent,
+    LojasComponent,
+    FichaTecnicaComponent,
+    CarrinhoComponent,
+    ProdutoViewComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot(),
+    OrderModule
   ],
   providers: [{
     provide:LocationStrategy,

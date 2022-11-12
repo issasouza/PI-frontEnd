@@ -1,0 +1,79 @@
+<div class="container-fluid mt-xxl-5 mb-xxl-5">
+
+    <div class="row d-flex justify-content-center mt-lg-4">
+        <div class="col-md-6 text-center">
+            <img src="{{produtos.foto}}" alt="" height="400px " width="400px">
+        </div>
+        <div class="col-md-6">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <h1 class="text-center">{{produtos.nome}}</h1>
+                    <hr>
+                    <p class="mt-5">{{produtos.descricao}}</p>
+
+                    <div class="row-cols-3">
+                        <p class="card-text">{{produtos.preco | currency: 'BRL'}}</p>
+                    </div>
+                    <div class="row-cols-3">
+                        <div class="input-group mt-lg-3">
+                            <select class="form-select" id="inputGroupSelect04"
+                                aria-label="Example select with button addon" aria-placeholder="Unidade">
+                                <option selected>Quantidade</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <button routerLink="/carrinho" class="btn btn-outline-success m-2">Adicione ao carrinho <i
+                                class="bi bi-cart3"></i></button>
+                        <button class="btn btn-outline-primary m-2">Comprar <i class="bi bi-basket2-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1 class="m-xxl-5">Adicionados recentemente:</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://i.imgur.com/WVfBX8n.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Brigadeiro de colher</h5>
+                            <p class="card-text">R$13.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://i.imgur.com/Hv3Qtjm.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Brigadeiro tradicional</h5>
+                            <p class="card-text">R$13.00</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://i.imgur.com/JmdOfB4.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Petit Gateau</h5>
+                            <p class="card-text">R$13.00</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

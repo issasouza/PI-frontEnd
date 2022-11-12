@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { EntrarComponent } from './entrar/entrar.component';
+import { FichaTecnicaComponent } from './ficha-tecnica/ficha-tecnica.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LadingPageComponent } from './lading-page/lading-page.component';
+import { LojasComponent } from './lojas/lojas.component';
+import { ProdutoViewComponent } from './produto-view/produto-view.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
@@ -30,7 +35,12 @@ const routes: Routes = [
   {path: 'categoria-edit/:id', component:CategoriaEditComponent},
   {path: 'categoria-delete/:id', component:CategoriaDeleteComponent},
   {path: 'produtos-edit/:id', component: ProdutosEditComponent},
-  {path: 'produtos-delete/:id', component: ProdutosDeleteComponent}
+  {path: 'produtos-delete/:id', component: ProdutosDeleteComponent},
+  {path: 'user-edit/:id', component: UserEditComponent},
+  {path: 'carrinho', component: CarrinhoComponent},
+  {path: 'ficha-tecnica',component: FichaTecnicaComponent},
+  {path: 'lojas', component: LojasComponent},
+  {path: 'produto-view/:id', component: ProdutoViewComponent}
 ];
 
 @NgModule({

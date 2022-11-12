@@ -45,22 +45,6 @@
                 categoria</button>
         </div>
 
-        <div class="col-md-6">
-            <div class="row d-flex justify-content-end">
-                <div class="col-md-6">
-                    <nav class="navbar bg-light">
-                        <div class="container-fluid">
-                            <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Produto por categoria"
-                                    aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Pesquisa</button>
-                            </form>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-
     </div>
     <hr>
     <h1 class="text-center">Venha da uma olhada nos nossos produtos!</h1>
@@ -82,14 +66,24 @@
         </div>
     </nav>
 
-    <div class="tab-content" id="nav-tabContent">
+    <div class="tab-content d-flex justify-content-center" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
             tabindex="0">
+
+            <div class="row d-flex justify-content-center mt-4">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nome" placeholder="Digite o nome do produto que deseja encontrar."
+                        [(ngModel)]="nomeProduto" (keyup)="findByNomeProduto()">
+                    </div>
+                </div>
+
+            </div>
             <div class="card-group">
-                <div class="row row-cols-1 row-cols-md m-lg-4 g-4 mt-4" *ngFor="let item of listaProdutos">
+                <div class="row row-cols-1 row-cols-md m-lg-4 g-4 mt-4" *ngFor="let item of listaProdutos | orderBy : key : reverse">
                     <div class="col">
                         <div class="card h-100">
-                            <img widith="250px" height="250px" src="{{item.foto}}" class="card-img-top" alt="">
+                            <img [routerLink]="['/produto-view', item.id]" widith="250px" height="250px" src="{{item.foto}}" class="card-img-top" alt="">
                             <div class="card-body mt-4">
                                 <h5 class="card-title text-center">{{item.nome}}</h5>
                                 <hr>
@@ -109,10 +103,10 @@
         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
 
             <div class="card-group">
-                <div class="row row-cols-1 row-cols-md m-lg-4 g-4 mt-4" *ngFor="let item of user.produtos">
+                <div class="row row-cols-1 row-cols-md m-lg-4 g-4 mt-4" *ngFor="let item of user.produtos | orderBy : key : reverse">
                     <div class="col">
                         <div class="card h-100">
-                            <img widith="250px" height="250px" src="{{item.foto}}" class="card-img-top" alt="">
+                            <img [routerLink]="['/produto-view', item.id]" widith="250px" height="250px" src="{{item.foto}}" class="card-img-top" alt="">
                             <div class="card-body mt-4">
                                 <h5 class="card-title text-center">{{item.nome}}</h5>
                                 <hr>
@@ -132,12 +126,21 @@
                 </div>
             </div>
         </div>
+
         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
-            <div class="card-group" *ngFor="let categoria of listaCategorias">
+
+            <div class="row d-flex justify-content-center mt-4">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nome" placeholder="Digite a categoria que deseja encontrar."
+                        [(ngModel)]="nomeCategoria" (keyup)="findByNomeCategoria()">
+                    </div>
+                </div>
+            <div class="card-group" *ngFor="let categoria of listaCategorias | orderBy : key : reverse">
                 <div class="row row-cols-1 row-cols-md m-lg-4 g-4 mt-4" *ngFor="let item of categoria.produtos">
                     <div class="col">
                         <div class="card h-100">
-                            <img widith="250px" height="250px" src="{{item.foto}}" class="card-img-top" alt="">
+                            <img [routerLink]="['/produto-view', item.id]" widith="250px" height="250px" src="{{item.foto}}" class="card-img-top" alt="">
                             <div class="card-body mt-4">
                                 <h5 class="card-title text-center">{{item.nome}}</h5>
                                 <hr>
