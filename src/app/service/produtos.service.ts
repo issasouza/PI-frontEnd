@@ -15,7 +15,7 @@ export class ProdutosService {
   }
 
   getAllProdutos():Observable<Produtos[]>{
-    return this.http.get<Produtos[]>('http://localhost:8080/produtos', this.token)
+    return this.http.get<Produtos[]>('https://upv.onrender.com/produtos', this.token)
   }
 
   getByIdProdutos(id:number):Observable<Produtos>{
