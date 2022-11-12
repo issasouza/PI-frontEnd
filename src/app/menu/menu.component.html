@@ -10,22 +10,22 @@
           <a class="nav-link active fs-16 m-lg-3" routerLink="/inicio">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active fs-16 m-lg-3" href="#">Perfil</a>
+          <a class="nav-link fs-16 m-lg-3" [routerLink]="['/user-edit', id]">Perfil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active fs-16 m-lg-3" href="#">Fichas tecnicas</a>
+          <a class="nav-link fs-16 m-lg-3" routerLink="/ficha-tecnica">Fichas tecnicas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active fs-16 m-lg-3" routerLink="/produtos" >Produtos</a>
+          <a class="nav-link fs-16 m-lg-3" routerLink="/produtos" >Produtos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active fs-16 m-lg-3" href="#">Lojas</a>
+          <a class="nav-link fs-16 m-lg-3" routerLink="/lojas">Lojas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active fs-16 m-lg-3" routerLink="/sobre-nos">Sobre nós</a>
+          <a class="nav-link fs-16 m-lg-3" routerLink="/sobre-nos">Sobre nós</a>
         </li>
         <li class="nav-item">
-          <button class="nav-link fs-16 m-lg-3 btn btn-azul text-light" href="#">Seu carrinho <i class="bi bi-cart3"></i></button>
+          <button class="nav-link fs-16 m-lg-3 btn btn-azul text-light" routerLink="/carrinho">Seu carrinho <i class="bi bi-cart3"></i></button>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto d-flex align-items-end">

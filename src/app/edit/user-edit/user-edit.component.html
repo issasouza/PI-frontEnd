@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class=" col-md-3">
+            <div class="text-center mt-xxl-5">
+                <picture class="" >
+                    <img src="{{user.foto}}" alt="" class="bd-placeholder-img rounded-circle" width="250" height="250">
+                </picture>
+                <h4>{{user.nome}}</h4>
+            </div>
+        </div>
+            <div class="col-md-9 mt-5 mb-5">
+                <div class="raw d-flex justify-content-center">
+                    <div class="col-md-10">
+                        <h1 class=" text-center mb-3">Atualizar Usuário</h1>
+                        <hr>
+
+                        <div class="form-floating mb-4">
+                            <input [(ngModel)]="user.nome" class="form-control" id="floatingInput" type="text" name="Nome" placeholder="Digite seu nome completo">
+                            <label for="usuario floatingInput">Nome completo</label>
+                        </div>
+                        
+                        <div class="form-floating mb-4">
+                            <input [(ngModel)]="user.usuario" class="form-control" id="floatingInput" type="usuario" name="usuario" placeholder="Digite seu email">
+                            <label for="email floatingInput">Email</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input (input)="confirmSenha($event)" class="form-control" id="floatingInput" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                            <label for="senha">Senha</label>
+                            <p>Sua senha deve ter no minimo 8 caracteres!</p>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input  [(ngModel)]="user.senha" class="form-control" id="floatingInput" type="password" name="confirmsenha" id="confirmsenha" placeholder="Digite sua senha">
+                            <label for="senha floatingInput">Confirma senha</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input  [(ngModel)]="user.foto" class="form-control" id="floatingInput" type="text" name="foto" placeholder="Adicione o link da sua foto">
+                            <label for="usuario floatingInput">Link da foto</label>
+                        </div>
+                            <div class="d-flex justify-content-center mt-5 ">
+
+                            <button type="submit" class="btn myButtonCancel button-4" routerLink="/inicio">Cancelar</button>
+
+                            <button type="submit" class="btn myButton" (click)="atualizar()">Atualizar</button>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>

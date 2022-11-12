@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
 import { Produtos } from 'src/app/model/Produtos';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutosService } from 'src/app/service/produtos.service';
 import { environment } from 'src/environments/environment.prod';
@@ -20,7 +21,8 @@ export class ProdutosDeleteComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private produtosService: ProdutosService
+    private produtosService: ProdutosService,
+    private alertas: AlertasService
   ) { }
 
 
@@ -42,7 +44,7 @@ export class ProdutosDeleteComponent implements OnInit {
 
   apagar(){
   this.produtosService.deleteProdutos(this.idProduto).subscribe(()=>{
-    alert('Produto apagado com sucesso!')
+    this.alertas.showAlertSuccess('Produto apagado com sucesso!')
     this.router.navigate(['/produtos'])
   })
 
