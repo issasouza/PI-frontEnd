@@ -1,0 +1,38 @@
+<div class="container mb-5 mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-danger">Apagar produto</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="text-center text-dark">Você tem certeza que deseja apagar esse produto</h4>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <img widith="250px" height="250px" src="{{produtos.foto}}" class="card-img-top" alt="">
+                <div class="card-body mt-4">
+                    <h5 class="card-title text-center">{{produtos.nome}}</h5>
+                    <hr>
+                    <p class="card-text">{{produtos.descricao}}</p>
+                    <p class="card-text">{{produtos.preco| currency: 'BRL'}}<i class="bi bi-cart3 m-lg-2"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-md-12 d-flex justify-content-center">
+            <button class="btn btn-danger mr-4 m-1" routerLink="/produtos">Não</button>
+            <button class="btn btn-success m-1"(click)="apagar()">Sim</button>
+
+        </div>
+    </div>
+
+</div>
+
+
