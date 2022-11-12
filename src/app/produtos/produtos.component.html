@@ -83,7 +83,7 @@
                 <div class="row row-cols-1 row-cols-md m-lg-4 g-4 mt-4" *ngFor="let item of listaProdutos | orderBy : key : reverse">
                     <div class="col">
                         <div class="card h-100">
-                            <img widith="250px" height="250px" src="{{item.foto}}" class="card-img-top" alt="">
+                            <img [routerLink]="['/produto-view', item.id]" widith="250px" height="250px" src="{{item.foto}}" class="card-img-top" alt="">
                             <div class="card-body mt-4">
                                 <h5 class="card-title text-center">{{item.nome}}</h5>
                                 <hr>
@@ -106,7 +106,7 @@
                 <div class="row row-cols-1 row-cols-md m-lg-4 g-4 mt-4" *ngFor="let item of user.produtos | orderBy : key : reverse">
                     <div class="col">
                         <div class="card h-100">
-                            <img widith="250px" height="250px" src="{{item.foto}}" class="card-img-top" alt="">
+                            <img [routerLink]="['/produto-view', item.id]" widith="250px" height="250px" src="{{item.foto}}" class="card-img-top" alt="">
                             <div class="card-body mt-4">
                                 <h5 class="card-title text-center">{{item.nome}}</h5>
                                 <hr>
@@ -140,7 +140,7 @@
                 <div class="row row-cols-1 row-cols-md m-lg-4 g-4 mt-4" *ngFor="let item of categoria.produtos">
                     <div class="col">
                         <div class="card h-100">
-                            <img widith="250px" height="250px" src="{{item.foto}}" class="card-img-top" alt="">
+                            <img [routerLink]="['/produto-view', item.id]" widith="250px" height="250px" src="{{item.foto}}" class="card-img-top" alt="">
                             <div class="card-body mt-4">
                                 <h5 class="card-title text-center">{{item.nome}}</h5>
                                 <hr>

@@ -13,6 +13,7 @@ import { FichaTecnicaComponent } from './ficha-tecnica/ficha-tecnica.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LadingPageComponent } from './lading-page/lading-page.component';
 import { LojasComponent } from './lojas/lojas.component';
+import { ProdutoViewComponent } from './produto-view/produto-view.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
@@ -38,7 +39,8 @@ const routes: Routes = [
   {path: 'user-edit/:id', component: UserEditComponent},
   {path: 'carrinho', component: CarrinhoComponent},
   {path: 'ficha-tecnica',component: FichaTecnicaComponent},
-  {path: 'lojas', component: LojasComponent}
+  {path: 'lojas', component: LojasComponent},
+  {path: 'produto-view/:id', component: ProdutoViewComponent}
 ];
 
 @NgModule({

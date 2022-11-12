@@ -26,6 +26,7 @@ import { OrderModule } from 'ngx-order-pipe';
 import { LojasComponent } from './lojas/lojas.component';
 import { FichaTecnicaComponent } from './ficha-tecnica/ficha-tecnica.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ProdutoViewComponent } from './produto-view/produto-view.component';
 
 
 
@@ -50,6 +51,7 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     LojasComponent,
     FichaTecnicaComponent,
     CarrinhoComponent,
+    ProdutoViewComponent,
     
   ],
   imports: [
