@@ -2,11 +2,11 @@
     <div class="row bg-azul ">
         <div class="col-md-12 text-white">
 
-            <h1 class="text-center m-5">Categorias</h1>
+            <h1 class="text-center m-5 fontBold">Categorias</h1>
             <div class="text-center">
                 <img widith="400px" height="400px" src="https://i.imgur.com/jd2qxHS.png" alt="">
             </div>
-            <h5 class="text-center">Veja aqui todas as categorias cadastradas</h5>
+            <h5 class="text-center fontBold">Veja aqui todas as categorias cadastradas</h5>
 
             <div class="row d-flex justify-content-center mt-4 mb-5">
                 <div class="col-md-3">
@@ -15,7 +15,7 @@
                             placeholder="Digite o nome da Categoria">
                     </div>
 
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center font">
                         <button class="btn btn-outline-light m-3" (click)="cadastrar()">Cadastrar</button>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
 <div class="container">
     <div class="row mt-5">
         <div class="col-md-12">
-            <h2 class="text-center">Todas as Categorias</h2>
+            <h2 class="text-center fontBold" >Todas as Categorias</h2>
         </div>
 
     </div>
@@ -39,16 +39,16 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col" class="text-right">Modificações</th>
+                        <th scope="col" class="font">#</th>
+                        <th scope="col" class="font">Categoria</th>
+                        <th scope="col" class="text-right font">Modificações</th>
                     </tr>
                 </thead>
                 <tbody >
                     <tr *ngFor="let item of listaCategoria">
                         <th>{{item.id}}</th>
                         <td>{{item.categoria}}</td>
-                        <td class="d-flex justify-content-end">
+                        <td class="d-flex justify-content-end font">
                             <button class="btn btn-info m-1" [routerLink]="['/categoria-edit', item.id]">Editar</button>
                             <button class="btn btn-danger m-1" [routerLink]="['/categoria-delete', item.id]">Apagar</button>
                         </td>

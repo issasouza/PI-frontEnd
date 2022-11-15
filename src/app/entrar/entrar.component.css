@@ -6,10 +6,6 @@
     background-size: cover;
 }
 
-h1{
-    font-family: 'Raleway', sans-serif;
-    font-weight: bolder;
-}
 
 .myButton {
 	background-color:#208694;
@@ -18,7 +14,6 @@ h1{
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
 	font-size:17px;
 	padding:8px 21px;
 	text-decoration:none;

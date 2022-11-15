@@ -40,19 +40,19 @@
     <div class="row d-flex align-items-center">
         <div class="col-md-6">
             <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                class="btn btn-outline-dark m-lg-3">Registrar novo produto</button>
-            <button type="button" class="btn btn-outline-dark" routerLink="/categorias">Registar nova
+                class="btn btn-outline-dark m-lg-3 fontBold">Registrar novo produto</button>
+            <button type="button" class="btn btn-outline-dark fontBold" routerLink="/categorias">Registar nova
                 categoria</button>
         </div>
 
     </div>
     <hr>
-    <h1 class="text-center">Venha da uma olhada nos nossos produtos!</h1>
+    <h1 class="text-center fontBold">Venha da uma olhada nos nossos produtos!</h1>
 </div>
 <!-- nav -->
 <div class="container mb-5 mt-5" id="produtos">
     <nav>
-        <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+        <div class="nav nav-tabs justify-content-center fontBold" id="nav-tab" role="tablist">
             <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
                 type="button" role="tab" aria-controls="nav-home" aria-selected="true">Todos os produtos</button>
 
@@ -166,10 +166,10 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Novo Produto</h1>
+                <h1 class="modal-title fs-5 fontBold" id="exampleModalLabel">Novo Produto</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body font">
                 <div class="form-group mt-lg-3">
                     <label class="mb-2" for="titulo">Nome do produto</label>
                     <input [(ngModel)]="produtos.nome" type="text" class="form-control" id="nome"
@@ -208,7 +208,7 @@
 
 
             </div>
-            <div class="modal-footer mt-lg-3">
+            <div class="modal-footer mt-lg-3 font">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                 <button type="button" class="btn btn-info" data-bs-dismiss="modal" (click)="publicar()">Registar
                     novo
