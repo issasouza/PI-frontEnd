@@ -1,32 +1,25 @@
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
-</style>
-
-
 <div class="container-fluid">
     <div class="row d-flex align-items-center">
         <div class="col-md-6" id="img-bg"></div>
         <div class="col-md-6">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-6">
-                    <h1 class="text-center mb-3">
-                            ENTRAR
-                    </h1>
-                    <div class="form-floating mb-3">
+                    <h1 class="text-center mb-3 fontBold">Entrar</h1>
+                    <div class="form-floating mb-3 ">
                         <input [(ngModel)]="userLogin.usuario" class="form-control" id="floatingInput" type="text" name="usuario" placeholder="Seu email">
-                        <label for="usuario">Email</label>
+                        <label for="usuario fontBold">Email</label>
                     </div>
                     <div class="form-floating mt-3">
                         <input [(ngModel)]="userLogin.senha" class="form-control" id="floatingPassword" type="password" name="senha" placeholder="Sua senha">
                         <label for="senha floatingPassword">Senha</label>
                     </div>
 
-                    <div class="d-flex justify-content-center ">
+                    <div class="d-flex justify-content-center font ">
                         <button type="submit" class="myButton mt-5" (click)="entrar()">Entrar</button>
                     </div>
 
                     <div >
-                        <hr class="mt-5 mb-5"><p>Não tem uma conta?<a routerLink="/cadastrar"> Cadastre-se</a></p>
+                        <hr class="mt-5 mb-5"><p class="font">Não tem uma conta?<a routerLink="/cadastrar"> Cadastre-se</a></p>
                     </div>
                 </div>
             </div>
