@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { ModalModule } from 'ngx-bootstrap/modal';
+
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -22,11 +22,13 @@ import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.compon
 import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
-import { OrderModule } from 'ngx-order-pipe';
+
 import { LojasComponent } from './lojas/lojas.component';
 import { FichaTecnicaComponent } from './ficha-tecnica/ficha-tecnica.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutoViewComponent } from './produto-view/produto-view.component';
+import { OrderModule } from 'ngx-order-pipe';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -60,7 +62,7 @@ import { ProdutoViewComponent } from './produto-view/produto-view.component';
     HttpClientModule,
     FormsModule,
     ModalModule.forRoot(),
-    OrderModule
+    OrderModule 
   ],
   providers: [{
     provide:LocationStrategy,
