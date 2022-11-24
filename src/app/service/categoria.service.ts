@@ -16,24 +16,24 @@ export class CategoriaService {
   }
 
   getAllCategoria(): Observable<Categoria[]> {
-    return this.http.get<Categoria[]>('https://upv.onrender.com/categoria', this.token)
+    return this.http.get<Categoria[]>('https://upvzinho.onrender.com/categoria', this.token)
   }
   getByIdCategoria(id:number): Observable<Categoria>{
-    return this.http.get<Categoria>(`https://upv.onrender.com/categoria/${id}`, this.token)
+    return this.http.get<Categoria>(`https://upvzinho.onrender.com/categoria/${id}`, this.token)
   }
   getByNomeCategoria(nome: string): Observable<Categoria[]>{
-    return this.http.get<Categoria[]>(`https://upv.onrender.com/categoria/nome/${nome}`, this.token)
+    return this.http.get<Categoria[]>(`https://upvzinho.onrender.com/categoria/nome/${nome}`, this.token)
   }
 
   postCategoria(categoria: Categoria): Observable<Categoria> {
-    return this.http.post<Categoria>('https://upv.onrender.com/categoria', categoria, this.token)
+    return this.http.post<Categoria>('https://upvzinho.onrender.com/categoria', categoria, this.token)
   }
   
   putCategoria(categoria: Categoria): Observable<Categoria> {
-    return this.http.put<Categoria>('https://upv.onrender.com/categoria', categoria, this.token)
+    return this.http.put<Categoria>('https://upvzinho.onrender.com/categoria', categoria, this.token)
   }
 
   deleteCategoria(id:number){
-    return this.http.delete(`https://upv.onrender.com/categoria/${id}`, this.token)
+    return this.http.delete(`https://upvzinho.onrender.com/categoria/${id}`, this.token)
   }
 }
