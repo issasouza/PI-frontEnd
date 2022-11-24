@@ -88,7 +88,7 @@
                                 <h5 class="card-title text-center">{{item.nome}}</h5>
                                 <hr>
                                 <p class="card-text">Categoria: {{item.categoria.categoria}}</p>
-                                <p class="card-text">{{item.descricao}}</p>
+                                <!-- <p class="card-text">{{item.descricao}}</p> -->
                                 <p class="card-text">{{item.preco | currency: 'BRL'}}<i class="bi bi-cart3 m-lg-2"></i>
                                 </p>
                                 <hr>
@@ -111,7 +111,7 @@
                                 <h5 class="card-title text-center">{{item.nome}}</h5>
                                 <hr>
                                 <p class="card-text">Categoria: {{item.categoria.categoria}}</p>
-                                <p class="card-text">{{item.descricao}}</p>
+                                <!-- <p class="card-text">{{item.descricao}}</p> -->
                                 <p class="card-text">{{item.preco | currency: 'BRL'}}<i class="bi bi-cart3 m-lg-2"></i>
                                 </p>
                                 <br>
@@ -144,7 +144,7 @@
                             <div class="card-body mt-4">
                                 <h5 class="card-title text-center">{{item.nome}}</h5>
                                 <hr>
-                                <p class="card-text">{{item.descricao}}</p>
+                                <!-- <p class="card-text">{{item.descricao}}</p> -->
                                 <p class="card-text">{{item.preco | currency: 'BRL'}}<i class="bi bi-cart3 m-lg-2"></i>
                                 </p>
                                 <hr>
@@ -188,11 +188,11 @@
                         placeholder="coloque o link da foto">
                 </div>
 
-                <!-- <div class="form-group mt-lg-3">
+                <div class="form-group mt-lg-3">
                     <label class="mb-2" for="titulo">Descrição do produto</label>
                     <textarea [(ngModel)]="produtos.descricao" name="descricao" class="form-control" id="descriao"
                         rows="2"></textarea>
-                </div> -->
+                </div>
 
                 <div class="form-group mt-lg-3 ">
                     <label class="mb-2" for="Categoria" data-bs-dismiss="modal">Escolha uma categoria ou <a
