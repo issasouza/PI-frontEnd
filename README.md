@@ -5,7 +5,7 @@
 ## Equipe
 - <a href="https://github.com/issasouza">Isabelly Souza </a>
 -  <a href="https://github.com/Nataly-Carvalho">Nataly Carvalho</a>
--  Caio Daniel vitor
+-  Caio Daniel Vitor
 -  Israel Melo 
 -  Sergio Bezera
 
