@@ -7,8 +7,17 @@
                         <hr>
 
                         <div class="form-floating mb-4">
-                            <input [(ngModel)]="user.nome" class="form-control" id="floatingInput" type="text" name="Nome" placeholder="Digite seu nome completo">
-                            <label for="usuario floatingInput">Nome completo</label>
+                            <input [(ngModel)]="user.nome" class="form-control" id="floatingInput" type="text" name="Nome" placeholder="Digite seu nome">
+                            <label for="usuario floatingInput">Nome</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input [(ngModel)]="user.sobrenome" class="form-control" id="floatingInput" type="text" name="sobrenome" placeholder="Digite seu sobrenome">
+                            <label for="usuario floatingInput">Sobrenome</label>
+                        </div>
+
+                        <div class="form-floating mb-4">
+                            <input [(ngModel)]="user.cpf" class="form-control" id="floatingInput" type="usuario" name="cpf" placeholder="Digite seu email">
+                            <label for="email floatingInput">digite seu cpf</label>
                         </div>
                         
                         <div class="form-floating mb-4">
@@ -29,6 +38,26 @@
                             <input  [(ngModel)]="user.foto" class="form-control" id="floatingInput" type="text" name="foto" placeholder="Adicione o link da sua foto">
                             <label for="usuario floatingInput">Link da foto</label>
                         </div>
+                        <h2>enderço</h2>
+                        <hr>
+                        <div class="form-floating mb-4">
+                            <input [(ngModel)]="user.cep" class="form-control" id="floatingInput" type="usuario" name="usuario" placeholder="Digite seu cep">
+                            <label for="email floatingInput">cep</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input [(ngModel)]="user.bairro" class="form-control" id="floatingInput" type="usuario" name="usuario" placeholder="Digite seu email">
+                            <label for="email floatingInput">bairro</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input [(ngModel)]="user.rua" class="form-control" id="floatingInput" type="usuario" name="usuario" placeholder="Digite seu email">
+                            <label for="email floatingInput">rua</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input [(ngModel)]="user.numero" class="form-control" id="floatingInput" type="usuario" name="usuario" placeholder="Digite seu email">
+                            <label for="email floatingInput">numero</label>
+                        </div>
+
+
                             <div class="d-flex justify-content-center mt-5 font ">
 
                             <button type="submit" class="btn myButtonCancel button-4" routerLink="/entrar">Cancelar</button>
