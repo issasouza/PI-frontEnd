@@ -1,63 +1,113 @@
 <div class="container-fluid">
     <div class="row">
-            <div class="col-md-6 mt-5 mb-5">
+            <div class="col-md-12 mt-5 mb-5">
                 <div class="raw d-flex justify-content-center">
-                    <div class="col-md-10">
-                        <h1 class=" text-center mb-3 fontBold">Cadastre-se</h1>
+                    <div class="col-md-7">
+                        <div class="text-center">
+                            <img src="https://i.imgur.com/OBv99FM.png" alt="">
+                        </div>
+                        <h1 class=" text-center mb-3 fontBold">CADASTRO</h1>
                         <hr>
-
-                        <div class="form-floating mb-4">
+                        <div class="row">
+                            <div class="form-floating mb-4 col-md-6">
                             <input [(ngModel)]="user.nome" class="form-control" id="floatingInput" type="text" name="Nome" placeholder="Digite seu nome">
-                            <label for="usuario floatingInput">Nome</label>
-                        </div>
-                        <div class="form-floating mb-4">
-                            <input [(ngModel)]="user.sobrenome" class="form-control" id="floatingInput" type="text" name="sobrenome" placeholder="Digite seu sobrenome">
-                            <label for="usuario floatingInput">Sobrenome</label>
-                        </div>
-
-                        <div class="form-floating mb-4">
-                            <input [(ngModel)]="user.cpf" class="form-control" id="floatingInput" type="usuario" name="cpf" placeholder="Digite seu email">
-                            <label for="email floatingInput">digite seu cpf</label>
+                            <label for="usuario floatingInput">Nome*</label>
                         </div>
                         
-                        <div class="form-floating mb-4">
-                            <input [(ngModel)]="user.usuario" class="form-control" id="floatingInput" type="usuario" name="usuario" placeholder="Digite seu email">
-                            <label for="email floatingInput">Email</label>
+                             <div class="form-floating mb-4 col-md-6">
+                            <input [(ngModel)]="user.sobrenome" class="form-control" id="floatingInput" type="text" name="sobrenome" placeholder="Digite seu sobrenome">
+                            <label for="usuario floatingInput">Sobrenome*</label>
                         </div>
+                       </div>
 
-                        <div class="form-floating mb-3">
+                       <div class="row">
+                        <div class="form-floating mb-4 col-md-6">
+                            <input [(ngModel)]="user.cpf" class="form-control" id="floatingInput" type="cpf" name="cpf" placeholder="Digite seu email">
+                            <label for="cpf floatingInput">Digite seu CPF*</label>
+                        </div>
+                        
+                        <div class="form-floating mb-4 col-md-6">
+                            <input [(ngModel)]="user.telefone" class="form-control" id="floatingInput" type="usuario" name="usuario" placeholder="Digite seu email">
+                            <label for="email floatingInput">Telefone*</label>
+                        </div>
+                       </div>
+                       <div class="form-floating mb-4 ">
+                        <input [(ngModel)]="user.usuario" class="form-control" id="floatingInput" type="usuario" name="usuario" placeholder="Digite seu email">
+                        <label for="email floatingInput">Email*</label>
+                        
+                        <div class="row mt-4">
+                          <div class="form-floating mb-3 col-md-6">
                             <input (input)="confirmSenha($event)" class="form-control" id="floatingInput" type="password" name="senha" id="senha" placeholder="Digite sua senha">
-                            <label for="senha">Senha</label>
+                            <label for="senha">Senha*</label>
                             <p>Sua senha deve ter no minimo 8 caracteres!</p>
                         </div>
-                        <div class="form-floating mb-4">
+                        <div class="form-floating mb-4 col-md-6">
                             <input  [(ngModel)]="user.senha" class="form-control" id="floatingInput" type="password" name="confirmsenha" id="confirmsenha" placeholder="Digite sua senha">
-                            <label for="senha floatingInput">Confirma senha</label>
+                            <label for="senha floatingInput">Confirma senha*</label>
+                        </div>   
                         </div>
+
+                       
                         <div class="form-floating mb-4">
                             <input  [(ngModel)]="user.foto" class="form-control" id="floatingInput" type="text" name="foto" placeholder="Adicione o link da sua foto">
                             <label for="usuario floatingInput">Link da foto</label>
                         </div>
-                        <h2>enderço</h2>
-                        <hr>
+
+                        <div class="form-grup">
+                            <label for="tipo">Tipo de Usuário</label>
+                            <select [(ngModel)]="user.tipo" class="form-control bd" name="tipo" id="tipo" (change)='tipoUser($event)'>
+                                <option>Selecione um tipo de usuário</option>
+                                <option value="normal">Normal</option>
+                                <option value="adm">Loja</option>
+                            </select>
+                       </div>
+                            <div class="text-center mt-5 mb-5">
+                              <h2>ENDEREÇO</h2>
+                             <hr>  
+                            </div>
+                        
+                            <div class="row">
+                            <div class="form-floating mb-4 col-md-6">
+                            <input [(ngModel)]="user.cep" class="form-control" id="floatingInput" type="cep" name="cep" placeholder="Digite seu cep">
+                            <label for="cep floatingInput"> CEP*</label>
+                            </div>
+                           <div class="form-floating mb-4 col-md-6">
+                            <input [(ngModel)]="user.pais" class="form-control" id="floatingInput" type="pais" name="pais" placeholder="Pais">
+                            <label for="pais floatingInput"> Pais*</label>
+                            </div> 
+                            </div>
+
+                            <div class="form-floating mb-4">
+                                <input [(ngModel)]="user.estado" class="form-control" id="floatingInput" type="uf" name="uf" placeholder="Digite seu uf">
+                                <label for="estado floatingInput">UF*</label>
+                            </div>
+
+                            <div class="form-floating mb-4">
+                                <input [(ngModel)]="user.cidade" class="form-control" id="floatingInput" type="cidade" name="cidade" placeholder="Digite sua cidade">
+                                <label for="cidade floatingInput">Cidade*</label>
+                            </div>
+                       
+
                         <div class="form-floating mb-4">
-                            <input [(ngModel)]="user.cep" class="form-control" id="floatingInput" type="usuario" name="usuario" placeholder="Digite seu cep">
-                            <label for="email floatingInput">cep</label>
+                            <input [(ngModel)]="user.bairro" class="form-control" id="floatingInput" type="bairro" name="bairro" placeholder="bairro">
+                            <label for="bairro floatingInput">Bairro*</label>
                         </div>
-                        <div class="form-floating mb-4">
-                            <input [(ngModel)]="user.bairro" class="form-control" id="floatingInput" type="usuario" name="usuario" placeholder="Digite seu email">
-                            <label for="email floatingInput">bairro</label>
-                        </div>
-                        <div class="form-floating mb-4">
-                            <input [(ngModel)]="user.rua" class="form-control" id="floatingInput" type="usuario" name="usuario" placeholder="Digite seu email">
-                            <label for="email floatingInput">rua</label>
-                        </div>
-                        <div class="form-floating mb-4">
-                            <input [(ngModel)]="user.numero" class="form-control" id="floatingInput" type="usuario" name="usuario" placeholder="Digite seu email">
-                            <label for="email floatingInput">numero</label>
+                        <div class="row">
+                            <div class="form-floating mb-4 col-md-6">
+                                <input [(ngModel)]="user.rua" class="form-control" id="floatingInput" type="rua" name="rua" placeholder="Digite sua rua">
+                                <label for="rua floatingInput"> Rua*</label>
+                            </div>
+                            <div class="form-floating mb-4 col-md-6">
+                                <input [(ngModel)]="user.numero" class="form-control" id="floatingInput" type="numero" name="numero" placeholder="Digite seu numero">
+                                <label for="numero floatingInput"> Numero*</label>
+                            </div>
                         </div>
 
-
+                        <div class="form-floating mb-4">
+                            <input [(ngModel)]="user.complemento" class="form-control" id="floatingInput" type="complemento" name="complemento" placeholder="complemento">
+                            <label for="complemento floatingInput">Complemento</label>
+                        </div>
+                        
                             <div class="d-flex justify-content-center mt-5 font ">
 
                             <button type="submit" class="btn myButtonCancel button-4" routerLink="/entrar">Cancelar</button>
@@ -67,6 +117,4 @@
                     </div>
                 </div>
             </div>
-        <div class=" col-md-6" id = img-bg> </div>
-    </div>
 </div>
