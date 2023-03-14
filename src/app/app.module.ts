@@ -24,7 +24,6 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
 
 import { LojasComponent } from './lojas/lojas.component';
-import { FichaTecnicaComponent } from './ficha-tecnica/ficha-tecnica.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutoViewComponent } from './produto-view/produto-view.component';
 import { OrderModule } from 'ngx-order-pipe';
@@ -51,7 +50,6 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     UserEditComponent,
     AlertasComponent,
     LojasComponent,
-    FichaTecnicaComponent,
     CarrinhoComponent,
     ProdutoViewComponent,
     

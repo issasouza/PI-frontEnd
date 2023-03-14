@@ -9,7 +9,6 @@ import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.com
 import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { EntrarComponent } from './entrar/entrar.component';
-import { FichaTecnicaComponent } from './ficha-tecnica/ficha-tecnica.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LadingPageComponent } from './lading-page/lading-page.component';
 import { LojasComponent } from './lojas/lojas.component';
@@ -38,7 +37,6 @@ const routes: Routes = [
   {path: 'produtos-delete/:id', component: ProdutosDeleteComponent},
   {path: 'user-edit/:id', component: UserEditComponent},
   {path: 'carrinho', component: CarrinhoComponent},
-  {path: 'ficha-tecnica',component: FichaTecnicaComponent},
   {path: 'lojas', component: LojasComponent},
   {path: 'produto-view/:id', component: ProdutoViewComponent}
 ];

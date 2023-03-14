@@ -15,5 +15,8 @@ export class User{
     public cpf: string
     public complemento: string
     public rua: string
+    public cidade: string
+    public pais: string
+    public estado: string
     public produtos: Produtos[]
 }
