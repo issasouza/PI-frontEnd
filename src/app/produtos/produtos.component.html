@@ -35,6 +35,20 @@
         </div>
     </div>
 </div>
+
+<div class="container-fluid">
+    <div class="row d-flex align-items-center">
+        <div class="col-md-6">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                class="btn btn-outline-dark m-lg-3 fontBold">Registrar novo produto</button>
+            <button type="button" class="btn btn-outline-dark fontBold" routerLink="/categorias">Registar nova
+                categoria</button>
+        </div>
+
+    </div>
+    <hr>
+    <h1 class="text-center fontBold">Venha da uma olhada nos nossos produtos!</h1>
+</div>
 <!-- nav -->
 <div class="container mb-5 mt-5" id="produtos">
     <nav>
@@ -147,4 +161,59 @@
 
 </div>
 <!-- nav -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 fontBold" id="exampleModalLabel">Novo Produto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body font">
+                <div class="form-group mt-lg-3">
+                    <label class="mb-2" for="titulo">Nome do produto</label>
+                    <input [(ngModel)]="produtos.nome" type="text" class="form-control" id="nome"
+                        placeholder="Digite o nome do produto">
+                </div>
+
+                <div class="form-group mt-lg-3">
+                    <label class="mb-2" for="titulo">Preço</label>
+                    <input [(ngModel)]="produtos.preco" type="text" class="form-control" id="preco"
+                        placeholder="Digite o preço do produto">
+                </div>
+
+                <div class="form-group mt-lg-3">
+                    <label class="mb-2" for="titulo">Foto</label>
+                    <input [(ngModel)]="produtos.foto" type="text" class="form-control" id="foto"
+                        placeholder="coloque o link da foto">
+                </div>
+
+                <div class="form-group mt-lg-3">
+                    <label class="mb-2" for="titulo">Descrição do produto</label>
+                    <textarea [(ngModel)]="produtos.descricao" name="descricao" class="form-control" id="descriao"
+                        rows="2"></textarea>
+                </div>
+
+                <div class="form-group mt-lg-3 ">
+                    <label class="mb-2" for="Categoria" data-bs-dismiss="modal">Escolha uma categoria ou <a
+                            routerLink="/categorias">
+                            cadastre uma nova: </a></label>
+                    <select name="categoria" id="categoria" class="form-control" [(ngModel)]="idCategoria"
+                        (change)='findByIdCategoria'>
+                        <option *ngFor="let item of listaCategorias" value="{{item.id}}">
+                            {{item.categoria}}
+                        </option>
+                    </select>
+                </div>
+
+
+            </div>
+            <div class="modal-footer mt-lg-3 font">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-info" data-bs-dismiss="modal" (click)="publicar()">Registar
+                    novo
+                    produto</button>
+            </div>
+        </div>
+    </div>
 </div>

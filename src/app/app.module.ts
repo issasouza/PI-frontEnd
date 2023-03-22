@@ -28,7 +28,6 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutoViewComponent } from './produto-view/produto-view.component';
 import { OrderModule } from 'ngx-order-pipe';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { AdicionarProdutosComponent } from './adicionar-produtos/adicionar-produtos.component';
 
 
 
@@ -53,7 +52,6 @@ import { AdicionarProdutosComponent } from './adicionar-produtos/adicionar-produ
     LojasComponent,
     CarrinhoComponent,
     ProdutoViewComponent,
-    AdicionarProdutosComponent,
     
   ],
   imports: [
