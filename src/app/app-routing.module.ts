@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdicionarProdutosComponent } from './adicionar-produtos/adicionar-produtos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { CategoriasComponent } from './categorias/categorias.component';
@@ -38,7 +39,8 @@ const routes: Routes = [
   {path: 'user-edit/:id', component: UserEditComponent},
   {path: 'carrinho', component: CarrinhoComponent},
   {path: 'lojas', component: LojasComponent},
-  {path: 'produto-view/:id', component: ProdutoViewComponent}
+  {path: 'produto-view/:id', component: ProdutoViewComponent},
+  {path: 'adicionar-produtos', component: AdicionarProdutosComponent}
 ];
 
 @NgModule({
