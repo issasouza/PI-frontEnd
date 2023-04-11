@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdicionarProdutosComponent } from './adicionar-produtos/adicionar-produtos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { CategoriasComponent } from './categorias/categorias.component';
