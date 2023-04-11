@@ -44,7 +44,8 @@ const routes: Routes = [
   {path: 'produto-view/:id', component: ProdutoViewComponent},
   {path: 'adicionar-produtos', component: AdicionarProdutosComponent},
   {path: 'esqueceu-senha', component: EsqueceuSenhaComponent},
-  {path: 'troca-senha', component:TrocaSenhaComponent}
+  {path: 'troca-senha', component:TrocaSenhaComponent},
+  {path: 'adicionar-produtos', component:AdicionarProdutosComponent}
 ];
 
 @NgModule({
