@@ -1,0 +1,10 @@
+<h2>Redefinir senha</h2>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="password">Nova senha:</label>
+    <input type="password" class="form-control" id="password" name="password" [(ngModel)]="senha" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+

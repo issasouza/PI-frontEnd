@@ -10,12 +10,14 @@ import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.com
 import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { EntrarComponent } from './entrar/entrar.component';
+import { EsqueceuSenhaComponent } from './esqueceu-senha/esqueceu-senha.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LadingPageComponent } from './lading-page/lading-page.component';
 import { LojasComponent } from './lojas/lojas.component';
 import { ProdutoViewComponent } from './produto-view/produto-view.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { TrocaSenhaComponent } from './troca-senha/troca-senha.component';
 
 
 const routes: Routes = [
@@ -40,7 +42,9 @@ const routes: Routes = [
   {path: 'carrinho', component: CarrinhoComponent},
   {path: 'lojas', component: LojasComponent},
   {path: 'produto-view/:id', component: ProdutoViewComponent},
-  {path: 'adicionar-produtos', component: AdicionarProdutosComponent}
+  {path: 'adicionar-produtos', component: AdicionarProdutosComponent},
+  {path: 'esqueceu-senha', component: EsqueceuSenhaComponent},
+  {path: 'troca-senha', component:TrocaSenhaComponent}
 ];
 
 @NgModule({
