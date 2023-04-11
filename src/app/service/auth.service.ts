@@ -26,6 +26,9 @@ export class AuthService {
   getByIdUser(id:number):Observable<User>{
     return this.http.get<User>(`https://upvzinho-88f0.onrender.com/usuarios/${id}`)
   }
+ findByUsuario(usuario:String): Observable<User>{
+    return this.http.get<User>(`https://upvzinho-88f0.onrender.com/usuarios/esquecisenha/${usuario}`)
+  }
 
   logado(){
     let ok: boolean =false

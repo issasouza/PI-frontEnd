@@ -28,7 +28,9 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutoViewComponent } from './produto-view/produto-view.component';
 import { OrderModule } from 'ngx-order-pipe';
 import { ModalModule } from 'ngx-bootstrap/modal';
-
+import { AdicionarProdutosComponent } from './adicionar-produtos/adicionar-produtos.component';
+import { EsqueceuSenhaComponent } from './esqueceu-senha/esqueceu-senha.component';
+import { TrocaSenhaComponent } from './troca-senha/troca-senha.component';
 
 
 @NgModule({
@@ -52,6 +54,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     LojasComponent,
     CarrinhoComponent,
     ProdutoViewComponent,
+    AdicionarProdutosComponent,
+    EsqueceuSenhaComponent,
+    TrocaSenhaComponent,
     
   ],
   imports: [

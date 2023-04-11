@@ -13,10 +13,15 @@
                         <input [(ngModel)]="userLogin.senha" class="form-control" id="floatingPassword" type="password" name="senha" placeholder="Sua senha">
                         <label for="senha floatingPassword">Senha</label>
                     </div>
+                    <br>
+                    <div>
+                        <a routerLink="/esqueceu-senha">Esqueceu a senha?</a>
+                    </div>
 
                     <div class="d-flex justify-content-center font ">
                         <button type="submit" class="myButton mt-5" (click)="entrar()">Entrar</button>
                     </div>
+                    
 
                     <div >
                         <hr class="mt-5 mb-5"><p class="font">Não tem uma conta?<a routerLink="/cadastrar"> Cadastre-se</a></p>
