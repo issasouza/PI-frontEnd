@@ -64,7 +64,7 @@ export class AdicionarProdutosComponent implements OnInit {
       this.listaProdutos = resp
     })
   }
-//aaaaa
+//aaaaaaa
   findByIdUser(){
     this.authService.getByIdUser(this.idUser).subscribe((resp:User)=>{
       this.user = resp

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdicionarProdutosComponent } from './adicionar-produtos/adicionar-produtos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { CategoriasComponent } from './categorias/categorias.component';
@@ -18,6 +17,7 @@ import { ProdutoViewComponent } from './produto-view/produto-view.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { TrocaSenhaComponent } from './troca-senha/troca-senha.component';
+import { AdicionarProdutosComponent } from './adicionar-produtos/adicionar-produtos.component';
 
 
 const routes: Routes = [
@@ -45,7 +45,6 @@ const routes: Routes = [
   {path: 'adicionar-produtos', component: AdicionarProdutosComponent},
   {path: 'esqueceu-senha', component: EsqueceuSenhaComponent},
   {path: 'troca-senha', component:TrocaSenhaComponent},
-  {path: 'adicionar-produtos', component:AdicionarProdutosComponent}
 ];
 
 @NgModule({

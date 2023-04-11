@@ -33,8 +33,6 @@ import { EsqueceuSenhaComponent } from './esqueceu-senha/esqueceu-senha.componen
 import { TrocaSenhaComponent } from './troca-senha/troca-senha.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
