@@ -1,10 +1,46 @@
-<h2>Redefinir senha</h2>
+<div class="container con1 col-3 mt-5">
+  <div class="row d-flex justify-content-center">
+    <img src="https://i.imgur.com/X1Wvbro.png" class="img-fluid mt-5 rodaFoto" alt="logo upv">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <h1 class="align-center text-center mt-3">Email</h1>
+        <label class="m-3" for="email">Digite seu E-mail de cadasto:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+    </form>
+      <div class="row align-center m-3">
+        <div class="col-md-12 text-center">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button class="btn btn-danger m-3" routerLink="/entrar">Cancelar</button>
+      </div>
+      </div>
 
-<form (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <label for="password">Nova senha:</label>
-    <input type="password" class="form-control" id="password" name="password" [(ngModel)]="senha" required>
+      <div class="row">
+        <div class="d-flex justify-content-center">
+          <p class="bolde">PRECISA DE AJUDA?</p>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="d-flex justify-content-center">
+          <p class="bolde">Entre em contato com a gente</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-center  ">
+            <ul class="social-network ">
+      <li>
+        <a href="https://www.instagram.com/oddinarycosmo/" target="_blank" class="iconinstagram text-white"><i class="fa fa-instagram"
+                aria-hidden="true"></i> </a>
+    </li>
+    <li>
+        <a href="mailto:nataly.csilva@aluno.educacao.pe.gov.br" target="_blank" class="iconemail text-white"><i class="fa fa-envelope-o"
+                aria-hidden="true"></i> </a>
+    </li>
+    </ul>
+    </div>
+    </div>
+
   </div>
-  <button type="submit" class="btn btn-primary">Salvar</button>
-</form>
+</div>
 
