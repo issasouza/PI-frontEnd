@@ -1,0 +1,41 @@
+.rodaFoto {
+    border-radius: 35px;
+    width: 265px;
+    height: 140px;
+
+}
+
+.con1 {
+    background-color: #76A9B0;
+    border-radius: 35px;
+}
+
+.bolde {
+    font-weight: bold;
+}
+
+.social-network {
+    list-style: none;
+    padding: 0;
+
+}
+
+.social-network li {
+    display: inline;
+    margin: 0;
+    padding: 15px;
+}
+
+.fa {
+    font-size: 25pt;
+    color: white;
+    padding: 10px;
+}
+
+.fa-envelope-o:hover {
+    color: #000000;
+}
+
+.fa-instagram:hover {
+    color: #000000;
+}

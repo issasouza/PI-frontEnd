@@ -36,19 +36,6 @@
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="row d-flex align-items-center">
-        <div class="col-md-6">
-            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                class="btn btn-outline-dark m-lg-3 fontBold">Registrar novo produto</button>
-            <button type="button" class="btn btn-outline-dark fontBold" routerLink="/categorias">Registar nova
-                categoria</button>
-        </div>
-
-    </div>
-    <hr>
-    <h1 class="text-center fontBold">Venha da uma olhada nos nossos produtos!</h1>
-</div>
 <!-- nav -->
 <div class="container mb-5 mt-5" id="produtos">
     <nav>
@@ -92,7 +79,8 @@
                                 <hr>
                                 <p class="card-text">Categoria: {{item.categoria.categoria}}</p>
                                 <!-- <p class="card-text">{{item.descricao}}</p> -->
-                                <p class="card-text">{{item.preco | currency: 'BRL'}}<i class="bi bi-cart3 m-lg-2"></i>
+                                <p class="card-text">{{item.preco | currency: 'BRL'}}
+                                    <i routerLink="/carrinho" class="bi bi-cart3 m-lg-2"></i>
                                 </p>
                                 <hr>
                                 <small class="card-text"> by: {{item.usuario.nome}}</small>
@@ -117,7 +105,8 @@
                                 <hr>
                                 <p class="card-text">Categoria: {{item.categoria.categoria}}</p>
                                 <!-- <p class="card-text">{{item.descricao}}</p> -->
-                                <p class="card-text">{{item.preco | currency: 'BRL'}}<i class="bi bi-cart3 m-lg-2"></i>
+                                <p class="card-text">{{item.preco | currency: 'BRL'}}
+                                    <i routerLink="/carrinho" class="bi bi-cart3 m-lg-2"></i>
                                 </p>
                                 <br>
                                 <br>
@@ -154,8 +143,8 @@
                                     <h5 class="card-title text-center">{{item.nome}}</h5>
                                     <hr>
                                     <!-- <p class="card-text">{{item.descricao}}</p> -->
-                                    <p class="card-text">{{item.preco | currency: 'BRL'}}<i
-                                            class="bi bi-cart3 m-lg-2"></i>
+                                    <p class="card-text">{{item.preco | currency: 'BRL'}}
+                                        <i routerLink="/carrinho" class="bi bi-cart3 m-lg-2"></i>
                                     </p>
                                     <hr>
                                     <small class="card-text"> by: {{item.usuario.nome}}</small>
