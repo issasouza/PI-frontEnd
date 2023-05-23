@@ -8,6 +8,8 @@ import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutosService } from '../service/produtos.service';
+import { CarrinhoService } from '../service/carrinho.service';
+
 
 @Component({
   selector: 'app-produtos',
@@ -37,7 +39,8 @@ export class ProdutosComponent implements OnInit {
     private produtosService: ProdutosService,
     private categoriaService: CategoriaService,
     private authService: AuthService,
-    private alertas: AlertasService
+    private alertas: AlertasService,
+    
   ) { }
 
   ngOnInit() {
@@ -108,6 +111,8 @@ export class ProdutosComponent implements OnInit {
     }
   }
 
+
+  
 
 
 }

@@ -30,7 +30,7 @@ export class UserEditComponent implements OnInit {
   ngOnInit() {
     window.scroll(0, 0)
     if (environment.token == "") {
-      this.alertas.showAlertInfo('Sua seção expirou, faça o login novamente.')
+      this.alertas.showAlertInfo('Sua sessão expirou, faça o login novamente.')
       this.router.navigate(['/entrar'])
     }
     this.idUser = this.route.snapshot.params['id']
@@ -59,7 +59,7 @@ export class UserEditComponent implements OnInit {
         environment.nome = ''
         environment.foto = ''
         environment.id = 0
-
+        
         this.router.navigate(['/entrar'])
       })
     }
@@ -68,6 +68,7 @@ export class UserEditComponent implements OnInit {
   findByIdUser(id: number) {
     this.authService.getByIdUser(id).subscribe((resp: User) => {
       this.user = resp
+      this.confirmarSenha = ''
     })
   }
 

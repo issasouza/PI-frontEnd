@@ -8,3 +8,18 @@ a{
 .btn-azul{
     background-color: #017493;
 }
+
+.active{
+    color: #017493;
+}
+    
+.link-menu:hover{
+    color: #017493;
+    font-weight: bold;
+}
+.navbar-nav .active > .nav-link {
+    color: #017493;
+    font-weight: bold;
+}
+
+
