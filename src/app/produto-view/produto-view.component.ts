@@ -6,6 +6,7 @@ import { Produtos } from '../model/Produtos';
 import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutosService } from '../service/produtos.service';
+import { CarrinhoService } from '../service/carrinho.service';
 
 @Component({
   selector: 'app-produto-view',
@@ -19,12 +20,14 @@ export class ProdutoViewComponent implements OnInit {
   listaCategorias: Categoria[]
   idCategoria:number
 
+  listaProdutos: Produtos[]
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private produtosService: ProdutosService,
     private categoriaService: CategoriaService,
-    private alertas: AlertasService
+    private alertas: AlertasService,
+    private carrinhoService: CarrinhoService
   ) { }
 
   ngOnInit(){
@@ -51,5 +54,9 @@ export class ProdutoViewComponent implements OnInit {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
       this.listaCategorias =resp
     })
+  }
+  adicionarAoCarrinho(produto: Produtos) {
+    this.carrinhoService.adicionarProduto(produto);
+    this.alertas.showAlertSuccess("aaaaa")
   }
 }

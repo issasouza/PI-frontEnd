@@ -6,29 +6,29 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active fs-16 m-lg-3 fontBold" routerLink="/inicio">Inicio</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link active fs-16 m-lg-3 fontBold link-menu active" routerLink="/inicio">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link fs-16 m-lg-3 active fontBold" [routerLink]="['/user-edit', id]">Perfil</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link fs-16 m-lg-3 active fontBold link-menu" [routerLink]="['/user-edit', id]">Perfil</a>
         </li>
         
-        <li class="nav-item">
-          <a class="nav-link fs-16 m-lg-3 active fontBold" routerLink="/produtos" >Produtos</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link fs-16 m-lg-3 active fontBold  link-menu active" routerLink="/produtos" >Produtos</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link fs-16 m-lg-3 active  fontBold" routerLink="/lojas">Lojas</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link fs-16 m-lg-3 active  fontBold link-menu active" routerLink="/lojas">Lojas</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link fs-16 m-lg-3 active  fontBold" routerLink="/sobre-nos">Sobre nós</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link fs-16 m-lg-3 active  fontBold  link-menu active" routerLink="/sobre-nos">Sobre nós</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link fs-16 m-lg-3 active fontBold text-dark" routerLink="/carrinho">Seu carrinho <i class="bi bi-cart3"></i></a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link fs-16 m-lg-3 active fontBold text-dark link-menu active" routerLink="/carrinho">Seu carrinho <i class="bi bi-cart3"></i></a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto d-flex align-items-end">
         <li class="nav-item m-lg-4">
-          <a (click)='sair()' class="m-0 text-dark fs-16 fontBold">Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
+          <a (click)='sair()' class="m-0 text-dark fs-16 fontBold  link-menu">Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
           </a>
         </li>
       </ul>

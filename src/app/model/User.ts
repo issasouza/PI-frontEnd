@@ -1,3 +1,4 @@
+import { Carrinho } from "./CarrinhoModel"
 import { Produtos } from "./Produtos"
 export class User{
     public id: number
@@ -19,4 +20,5 @@ export class User{
     public pais: string
     public estado: string
     public produtos: Produtos[]
+    public carrinho: Carrinho
 }
