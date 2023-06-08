@@ -4,7 +4,7 @@ background-color:  #047393;
 }
 #img-bg{
     background-image: url('https://i.imgur.com/QotqroC.png');
-    min-height: 695px;
+    min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

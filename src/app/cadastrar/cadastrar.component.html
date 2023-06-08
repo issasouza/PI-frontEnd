@@ -12,13 +12,13 @@
                         <div class="form-floating mb-4 col-md-6">
                             <input [(ngModel)]="user.nome" class="form-control" id="floatingInput" type="text"
                                 name="Nome" placeholder="Digite seu nome">
-                            <label for="usuario floatingInput">Nome*</label>
+                            <label class="lb" for="usuario floatingInput">Nome*</label>
                         </div>
 
                         <div class="form-floating mb-4 col-md-6">
                             <input [(ngModel)]="user.sobrenome" class="form-control" id="floatingInput" type="text"
                                 name="sobrenome" placeholder="Digite seu sobrenome">
-                            <label for="usuario floatingInput">Sobrenome*</label>
+                            <label class="lb" for="usuario floatingInput">Sobrenome*</label>
                         </div>
                     </div>
 
@@ -26,13 +26,13 @@
                         <div class="form-floating mb-4 col-md-6">
                             <input [(ngModel)]="user.cpf" class="form-control" id="floatingInput" type="text" name="cpf"
                                 placeholder="Digite seu cpf">
-                            <label for="cpf floatingInput">Digite seu CPF*</label>
+                            <label class="lb" for="cpf floatingInput">Digite seu CPF*</label>
                         </div>
 
                         <div class="form-floating mb-4 col-md-6">
                             <input [(ngModel)]="user.telefone" class="form-control" id="floatingInput" type="text"
                                 name="telefone" placeholder="Digite seu telefone">
-                            <label for="telefone floatingInput">Telefone*</label>
+                            <label class="lb" for="telefone floatingInput">Telefone*</label>
                         </div>
                     </div>
                     <div class="form-floating mb-4 ">
@@ -44,13 +44,13 @@
                             <div class="form-floating mb-3 col-md-6">
                                 <input (input)="confirmSenha($event)" class="form-control" id="floatingInput"
                                     type="password" name="senha" id="senha" placeholder="Digite sua senha">
-                                <label for="senha">Senha*</label>
+                                <label class="lb" for="senha">Senha*</label>
                                 <p>Sua senha deve ter no minimo 8 caracteres!</p>
                             </div>
                             <div class="form-floating mb-4 col-md-6">
                                 <input [(ngModel)]="user.senha" class="form-control" id="floatingInput" type="password"
                                     name="confirmsenha" id="confirmsenha" placeholder="Digite sua senha">
-                                <label for="senha floatingInput">Confirma senha*</label>
+                                <label class="lb" for="senha floatingInput">Confirma senha*</label>
                             </div>
                         </div>
 
@@ -61,15 +61,16 @@
                             <label for="usuario floatingInput">Link da foto</label>
                         </div>
 
-                        <div class="form-grup">
-                            <label for="tipo">Tipo de Usuário</label>
-                            <select [(ngModel)]="user.tipo" class="form-control bd" name="tipo" id="tipo"
+                        <div class="form-grup form-floating">
+                            <select [(ngModel)]="user.tipo" class="form-control bd form-select" name="tipo" id="tipo floatingSelect"
                                 (change)='tipoUser($event)'>
-                                <option>Selecione um tipo de usuário</option>
+                                <option class="selected" >Selecione um tipo de usuário</option>
                                 <option value="normal">Normal</option>
                                 <option value="adm">Loja</option>
                             </select>
+                            <label for="tipo floatingSelect">Tipo de Usuário</label>
                         </div>
+
                         <div class="text-center mt-5 mb-5">
                             <h2>ENDEREÇO</h2>
                             <hr>
@@ -79,12 +80,12 @@
                             <div class="form-floating mb-4 col-md-6">
                                 <input [(ngModel)]="user.cep" class="form-control " id="floatingInput" type="cep"
                                     name="cep" placeholder="Digite seu cep">
-                                <label for="cep floatingInput"> CEP*</label>
+                                <label class="lb" for="cep floatingInput"> CEP*</label>
                             </div>
                             <div class="form-floating mb-4 col-md-6">
                                 <input [(ngModel)]="user.pais" class="form-control " id="floatingInput" type="pais"
                                     name="pais" placeholder="Pais">
-                                <label for="pais floatingInput"> Pais*</label>
+                                <label class="lb" for="pais floatingInput"> Pais*</label>
                             </div>
                         </div>
 
@@ -110,12 +111,12 @@
                             <div class="form-floating mb-4 col-md-6">
                                 <input [(ngModel)]="user.rua" class="form-control" id="floatingInput" type="rua"
                                     name="rua" placeholder="Digite sua rua">
-                                <label for="rua floatingInput"> Rua*</label>
+                                <label class="lb" for="rua floatingInput"> Rua*</label>
                             </div>
                             <div class="form-floating mb-4 col-md-6">
                                 <input [(ngModel)]="user.numero" class="form-control" id="floatingInput" type="numero"
                                     name="numero" placeholder="Digite seu numero">
-                                <label for="numero floatingInput"> Numero*</label>
+                                <label class="lb" for="numero floatingInput"> Numero*</label>
                             </div>
                         </div>
 
