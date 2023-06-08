@@ -1,3 +1,17 @@
 h1{
     font-size: 30px;
 }
+.zoom-container {
+    position: relative;
+    overflow: hidden;
+    width: 250px;
+    height:250px
+  }
+.zoom-image{
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.zoom-image:hover{
+    scale: (1,2);
+    transform: scale(1.2)
+}

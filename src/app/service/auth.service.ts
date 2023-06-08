@@ -9,6 +9,7 @@ import { UserLogin } from '../model/UserLogin';
   providedIn: 'root'
 })
 export class AuthService {
+  private usuarioAutenticado: User | undefined;
 
   constructor(
     private http: HttpClient
@@ -38,4 +39,5 @@ export class AuthService {
     }
     return ok
   }
+
 }

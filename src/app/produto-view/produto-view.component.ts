@@ -55,8 +55,9 @@ export class ProdutoViewComponent implements OnInit {
       this.listaCategorias =resp
     })
   }
+
   adicionarAoCarrinho(produto: Produtos) {
     this.carrinhoService.adicionarProduto(produto);
-    this.alertas.showAlertSuccess("aaaaa")
+    this.alertas.showAlertSuccess("Item adicionado ao carrinho")
   }
 }

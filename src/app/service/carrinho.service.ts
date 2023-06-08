@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Produtos } from '../model/Produtos';
+import { ProdutosService } from './produtos.service';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,7 @@ import { Produtos } from '../model/Produtos';
 export class CarrinhoService {
   carrinho: Produtos[] = [];
 
+  private produto: ProdutosService
   constructor() { }
 
   adicionarProduto(produto: Produtos) {
@@ -26,5 +28,6 @@ export class CarrinhoService {
   getCarrinho() {
     return this.carrinho;
   }
+
 }
 
