@@ -1,32 +1,59 @@
 <div>
-    <h2>Seu Carrinho de Compras</h2>
+    <h2 class="text-center">Seu Carrinho de Compras</h2>
   
     <div *ngIf="carrinho.length === 0">
       <p>O carrinho está vazio.</p>
     </div>
   
-    <div *ngIf="carrinho.length > 0">
-      <table>
-        <thead>
-          <tr>
-            <th>Nome do Produto</th>
-            <th>Preço</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let produto of carrinho">
-            <td> <img src="{{produto.foto}}" alt=""> </td>
-            <td>{{ produto.nome }}</td>
-            <td>{{ produto.preco }}</td>
-            <td>
-              <button (click)="removerDoCarrinho(produto)">Remover</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-  
-      <button (click)="limparCarrinho()">Limpar Carrinho</button>
-    </div>
+    
+
+
   </div>
-  
+
+
+<div class="container">
+<div class="justify-content-center  d-flex">
+
+
+  <div class="card col-md-12" style="width: 50rem;">
+    <div class="card-body">
+      <div *ngIf="carrinho.length > 0">
+        <table>
+
+          <tbody class="m-3">
+            <tr *ngFor="let produto of carrinho">
+
+               <div class="ms-2">
+              <td> <img class="fotinha m-3" src="{{produto.foto}}" height="100px" width="100px"  alt=""> </td>
+                </div> 
+                
+              <td class="m-3">{{ produto.nome }}</td>
+    
+              <td class="m-3 ">{{ produto.preco }}</td>
+
+              <div>
+               
+                <button class="m-3  btn btn-danger" (click)="removerDoCarrinho(produto)">Remover</button>
+               
+              </div>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+         
+    </div>
+       
+  </div>
+
+        
+
+</div>  
+>
+
+</div> 
+<div class="row justify-content-end">
+  <div class="col-md-6 text-center">
+      <button class="m-2 btn btn-danger" (click)="limparCarrinho()">Limpar Carrinho</button>
+      <button class="m-2 btn btn-primary">Finalizar Compra</button> 
+  </div>    
+</div>
