@@ -12,14 +12,14 @@
                     <p class="mt-5">{{produtos.descricao}}</p>
 
                     <div class="row-cols-3">
-                        <p class="card-text">{{produtos.preco | currency: 'BRL'}}</p>
+                        <p class="card-text">{{produtos.precoUnitario | currency: 'BRL'}}</p>
                     </div>
+                    <div class="mt-5">Quantidade</div>
                     <div class="row-cols-3">
                         <div class="input-group mt-lg-3">
                             <select class="form-select" id="inputGroupSelect04"
-                                aria-label="Example select with button addon" aria-placeholder="Unidade">
-                                <option selected>Quantidade</option>
-                                <option value="1">1</option>
+                                aria-label="Example select with button addon" aria-placeholder="Unidade"  [(ngModel)]="produtos.quantidade">
+                                <option value="1" selected >1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="mt-5 ">
-                        <button class="btn btn-outline-success m-2" (click)="adicionarAoCarrinho(produtos)">Adicione ao carrinho <i 
+                        <button class="btn btn-outline-success m-2"  (click)="adicionarAoCarrinho(produtos)">Adicione ao carrinho <i 
                                 class="bi bi-cart3"></i></button>
                         <button routerLink="/carrinho" class="btn btn-outline-primary m-2">Comprar <i class="bi bi-basket2-fill"></i></button>
                     </div>

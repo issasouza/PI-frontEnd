@@ -1,59 +1,57 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <div>
-    <h2 class="text-center">Seu Carrinho de Compras</h2>
-  
-    <div *ngIf="carrinho.length === 0">
-      <p>O carrinho está vazio.</p>
+  <h2 class="text-center m-4">Seu Carrinho de Compras</h2>
+
+  <div *ngIf="carrinho.length === 0">
+    <h3 class="text-center">O carrinho está vazio.</h3>
+    <div class="text-center">
+      <img class="text-center" src="https://i.imgur.com/6hfL5J0.gif" alt="">
     </div>
-  
-    
-
-
-  </div>
-
+</div>
 
 <div class="container">
-<div class="justify-content-center  d-flex">
-
-
-  <div class="card col-md-12" style="width: 50rem;">
-    <div class="card-body">
-      <div *ngIf="carrinho.length > 0">
-        <table>
-
-          <tbody class="m-3">
-            <tr *ngFor="let produto of carrinho">
-
-               <div class="ms-2">
-              <td> <img class="fotinha m-3" src="{{produto.foto}}" height="100px" width="100px"  alt=""> </td>
-                </div> 
+  <div class="justify-content-center d-flex">
+    <div class="card col-md-12" style="width: 50rem;">
+      <div class="card-body">
+        <div *ngIf="carrinho.length > 0">
+          <table class="row justify-content-center d-flex">
+            <div class="">
+              <div *ngFor="let produto of carrinho" class="d-flex align-items-center">
+                <div class="ms-2">
+                  <img class="fotinha mt-3" src="{{produto.foto}}" height="100px" width="100px" alt="">
+                </div>
+                <div class="me-xxl-5 ms-3">{{ produto.nome }}</div>
+                <div class="ms-xxl-5 mx-xxl-5"> <button class="btn btn-outline-success ms-3 me-2 " (click)="aumentarQuantidade(produto)">+</button> {{produto.quantidade}} <button
+                    class="btn btn-outline-danger ms-2"  (click)="diminuirQuantidade(produto)">-</button></div>
+                <div *ngIf="produto.quantidade ==1">
+                  <div class="ms-xxl-5">{{ produto.precoUnitario | currency: 'BRL' }}</div>
+                </div>
+                <div *ngIf="produto.quantidade > 1 ">
+                  <div  class="ms-xxl-5">{{ produto.preco | currency: 'BRL' }}</div>
+                </div>
                 
-              <td class="m-3">{{ produto.nome }}</td>
-    
-              <td class="m-3 ">{{ produto.preco }}</td>
-
-              <div>
-               
-                <button class="m-3  btn btn-danger" (click)="removerDoCarrinho(produto)">Remover</button>
-               
+                <div class="ms-3">
+                  <i (click)="removerDoCarrinho(produto)" class="bi bi-trash lixo text-end"></i>
+                </div>
               </div>
-            </tr>
-          </tbody>
-        </table>
+            </div>
+          </table>
+        </div>
       </div>
-         
+      <br>
+     
     </div>
-       
+  </div>
+</div>
+
+  <div class="card-body" >
+    <div class="row justify-content-center" >
+      <div class=" mt-4 ms-xxl-5 card mb-5" style="width: 40rem" >
+          <h3 class="text-center mt-4">Total: {{valorTotal()| currency: 'BRL' }} </h3>
+        <button class="m-2 btn btn-primary" (click)="limparCarrinho()" routerLink="/compra-realizada">Finalizar
+          Compra</button>
+      </div>
+    </div>
   </div>
 
-        
-
-</div>  
->
-
-</div> 
-<div class="row justify-content-end">
-  <div class="col-md-6 text-center">
-      <button class="m-2 btn btn-danger" (click)="limparCarrinho()">Limpar Carrinho</button>
-      <button class="m-2 btn btn-primary">Finalizar Compra</button> 
-  </div>    
-</div>

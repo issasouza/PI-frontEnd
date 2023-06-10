@@ -8,6 +8,7 @@ export class Produtos{
     public descricao: string
     public quantidade: number
     public foto: string
+    public precoUnitario:number
     public usuario: User
     public categoria: Categoria
 }

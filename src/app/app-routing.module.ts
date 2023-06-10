@@ -18,6 +18,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { TrocaSenhaComponent } from './troca-senha/troca-senha.component';
 import { AdicionarProdutosComponent } from './adicionar-produtos/adicionar-produtos.component';
+import { CompraRealizadaComponent } from './compra-realizada/compra-realizada.component';
 
 
 const routes: Routes = [
@@ -45,6 +46,7 @@ const routes: Routes = [
   {path: 'adicionar-produtos', component: AdicionarProdutosComponent},
   {path: 'esqueceu-senha', component: EsqueceuSenhaComponent},
   {path: 'troca-senha', component:TrocaSenhaComponent},
+  {path: 'compra-realizada', component:CompraRealizadaComponent}
 ];
 
 @NgModule({

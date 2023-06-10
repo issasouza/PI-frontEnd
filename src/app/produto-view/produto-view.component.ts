@@ -21,13 +21,16 @@ export class ProdutoViewComponent implements OnInit {
   idCategoria:number
 
   listaProdutos: Produtos[]
+  
+  carrinho: Produtos[] = [];
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private produtosService: ProdutosService,
     private categoriaService: CategoriaService,
     private alertas: AlertasService,
-    private carrinhoService: CarrinhoService
+    private carrinhoService: CarrinhoService,
+    
   ) { }
 
   ngOnInit(){
@@ -38,8 +41,8 @@ export class ProdutoViewComponent implements OnInit {
     let id= this.route.snapshot.params['id']
     this.findByIdProdutos(id)
     this.findAllCategoria()
+    
   }
-
   findByIdProdutos(id:number){
     this.produtosService.getByIdProdutos(id).subscribe((resp: Produtos)=>{
       this.produtos = resp
@@ -58,6 +61,17 @@ export class ProdutoViewComponent implements OnInit {
 
   adicionarAoCarrinho(produto: Produtos) {
     this.carrinhoService.adicionarProduto(produto);
-    this.alertas.showAlertSuccess("Item adicionado ao carrinho")
+    if (!produto.quantidade ) {
+      produto.quantidade++;
+      produto.preco = produto.precoUnitario 
+      this.produtos.preco = this.produtos.preco * this.produtos.quantidade
+    }
+    else if(produto.quantidade >=1){
+      produto.preco = produto.precoUnitario
+      this.produtos.preco = this.produtos.preco * this.produtos.quantidade
+    }
+    this.alertas.showAlertSuccess("Item adicionado ao carrinho");
   }
+
+  
 }

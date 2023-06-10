@@ -31,6 +31,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { AdicionarProdutosComponent } from './adicionar-produtos/adicionar-produtos.component';
 import { EsqueceuSenhaComponent } from './esqueceu-senha/esqueceu-senha.component';
 import { TrocaSenhaComponent } from './troca-senha/troca-senha.component';
+import { CompraRealizadaComponent } from './compra-realizada/compra-realizada.component';
 
 
 
@@ -58,6 +59,7 @@ import { TrocaSenhaComponent } from './troca-senha/troca-senha.component';
     AdicionarProdutosComponent,
     EsqueceuSenhaComponent,
     TrocaSenhaComponent,
+    CompraRealizadaComponent,
     
   ],
   imports: [

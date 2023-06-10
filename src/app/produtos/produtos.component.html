@@ -79,7 +79,7 @@
                                 <hr>
                                 <p class="card-text">Categoria: {{item.categoria.categoria}}</p>
                                 <!-- <p class="card-text">{{item.descricao}}</p> -->
-                                <p class="card-text">{{item.preco | currency: 'BRL'}}
+                                <p class="card-text">{{item.precoUnitario | currency: 'BRL'}}
                                     <i routerLink="/carrinho" class="bi bi-cart3 m-lg-2"></i>
                                 </p>
                                 <hr>
@@ -105,7 +105,7 @@
                                 <hr>
                                 <p class="card-text">Categoria: {{item.categoria.categoria}}</p>
                                 <!-- <p class="card-text">{{item.descricao}}</p> -->
-                                <p class="card-text">{{item.preco | currency: 'BRL'}}
+                                <p class="card-text">{{item.precoUnitario | currency: 'BRL'}}
                                     <i routerLink="/carrinho" class="bi bi-cart3 m-lg-2"></i>
                                 </p>
                                 <br>
@@ -143,7 +143,7 @@
                                     <h5 class="card-title text-center">{{item.nome}}</h5>
                                     <hr>
                                     <!-- <p class="card-text">{{item.descricao}}</p> -->
-                                    <p class="card-text">{{item.preco | currency: 'BRL'}}
+                                    <p class="card-text">{{item.precoUnitario | currency: 'BRL'}}
                                         <i routerLink="/carrinho" class="bi bi-cart3 m-lg-2"></i>
                                     </p>
                                     <hr>
@@ -177,7 +177,7 @@
 
                     <div class="form-group mt-lg-3">
                         <label class="mb-2" for="titulo">Preço</label>
-                        <input [(ngModel)]="produtos.preco" type="text" class="form-control" id="preco"
+                        <input [(ngModel)]="produtos.precoUnitario" type="text" class="form-control" id="precoUnitario"
                             placeholder="Digite o preço do produto">
                     </div>
 
