@@ -1,6 +1,19 @@
 .fotinha{
     border-radius: 10%;
 }
-.letra{
-    font-size: 200px;
+
+td{
+    font-size: 20px;
 }
+.lixo{
+    font-size: 30px;
+    cursor: pointer;
+   
+}
+.margem {
+    margin-right: 40px;
+}
+  
+  .preco {
+    margin-left: px;
+  }
