@@ -61,17 +61,18 @@ export class ProdutoViewComponent implements OnInit {
 
   adicionarAoCarrinho(produto: Produtos) {
     this.carrinhoService.adicionarProduto(produto);
+   
+
     if (!produto.quantidade ) {
-      produto.quantidade++;
-      produto.preco = produto.precoUnitario 
-      this.produtos.preco = this.produtos.preco * this.produtos.quantidade
+      produto.quantidade = 1;
+      produto.preco = produto.precoUnitario;
+      produto.preco = produto.precoUnitario;
+      
+    } else if (produto.quantidade >= 1) {
+      produto.preco = produto.precoUnitario * produto.quantidade;
     }
-    else if(produto.quantidade >=1){
-      produto.preco = produto.precoUnitario
-      this.produtos.preco = this.produtos.preco * this.produtos.quantidade
-    }
+    
     this.alertas.showAlertSuccess("Item adicionado ao carrinho");
   }
-
   
 }
