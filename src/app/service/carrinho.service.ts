@@ -12,7 +12,8 @@ export class CarrinhoService {
   constructor() { }
 
   adicionarProduto(produto: Produtos) {
-    this.carrinho.push(produto);
+      this.carrinho.push(produto);
+    
   }
 
   limparCarrinho() {
@@ -24,6 +25,10 @@ export class CarrinhoService {
       this.carrinho.splice(index, 1);
     }
   }
+  obterItemPeloId(id: number): Produtos | undefined {
+    return this.carrinho.find(item => item.id === id);
+  }
+  
 
   getCarrinho() {
     return this.carrinho;

@@ -21,8 +21,9 @@
                 <div class="ms-2">
                   <img class="fotinha mt-3" src="{{produto.foto}}" height="100px" width="100px" alt="">
                 </div>
-                <div class="me-xxl-5 ms-3">{{ produto.nome }}</div>
-                <div class="ms-xxl-5 mx-xxl-5"> <button class="btn btn-outline-success ms-3 me-2 " (click)="aumentarQuantidade(produto)">+</button> {{produto.quantidade}} <button
+                <div class="me-xxl-5 ms-3 bolde">{{ produto.nome }}</div>
+               
+                <div class="ms-xxl-5 mx-xxl-5"><button class="btn btn-outline-success ms-3 me-2 " (click)="aumentarQuantidade(produto)">+</button> {{produto.quantidade}} <button
                     class="btn btn-outline-danger ms-2"  (click)="diminuirQuantidade(produto)">-</button></div>
                 <div *ngIf="produto.quantidade ==1">
                   <div class="ms-xxl-5">{{ produto.precoUnitario | currency: 'BRL' }}</div>
